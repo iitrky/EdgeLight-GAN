@@ -1,0 +1,62 @@
+# EdgeLight-GAN default training configuration.
+# Values below reproduce the hyperparameters explicitly stated in Sec. 5.1,
+# 5.4 and 5.6 of the paper. Where the manuscript states a value was
+# "empirically selected" but the numeric value could not be recovered from
+# the supplied document text (the six loss weights, lambda_rec..lambda_illum),
+# reasonable literature-standard defaults are used instead -- see the
+# "Reproducibility Notes" section of the README before treating results
+# obtained with this config as a reproduction of the paper's exact numbers.
+
+experiment_name: edgelight_gan_lol
+
+# --- Data -------------------------------------------------------------
+data:
+  dataset: lol              # one of: lol, lolv2, sid, medical, remote_sensing, surveillance, generic
+  train_root: ./datasets/LOL/train
+  val_root: ./datasets/LOL/val
+  image_size: 256           # Sec. 5.1 / 5.3
+  num_workers: 4
+
+# --- Model --------------------------------------------------------------
+model:
+  in_channels: 3
+  out_channels: 3
+  stem_channels: 32
+  branch_channels: 64
+  fused_channels: 128
+  num_residual_blocks: 3
+  compressed_channels: 96
+  decoder_channels: 64
+  discriminator_base_channels: 74
+
+# --- Optimization (Sec. 5.4) ---------------------------------------------
+train:
+  seed: 42                  # Sec. 5.1 / 5.6
+  epochs: 300                # Sec. 5.4
+  batch_size: 16              # Sec. 5.4
+  optimizer: adam
+  lr: 1.0e-4                 # Sec. 5.4 / Table 18 sensitivity analysis: best operating point
+  beta1: 0.9
+  beta2: 0.999
+  lr_schedule: cosine         # Sec. 5.4: cosine-annealing schedule
+  checkpoint_every: 10
+  log_every: 50
+  val_every: 5
+  output_dir: ./runs/edgelight_gan_lol
+
+# --- Loss weights (Sec. 4.3-4.8) -----------------------------------------
+# NOTE: placeholders -- see README "Reproducibility Notes".
+loss:
+  lambda_rec: 100.0
+  lambda_adv: 1.0
+  lambda_perc: 10.0
+  lambda_ssim: 5.0
+  lambda_edge: 5.0
+  lambda_illum: 2.0
+  adversarial_mode: lsgan
+  use_perceptual: true
+
+# --- Evaluation (Sec. 5.7) ------------------------------------------------
+eval:
+  metrics: [psnr, ssim, lpips, niqe, brisque]
+  batch_size: 1
