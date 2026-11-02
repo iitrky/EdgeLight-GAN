@@ -7,7 +7,7 @@ T. Kavitha¹\*, Dr. A. Kathirvel²
 ² Department of Computer Science and Engineering, Saveetha Engineering College, Chennai, India
 \* Correspondence: kavithat@saveetha.ac.in
 
-[![CI](https://github.com/GArulDalton/EdgeLight-GAN/actions/workflows/ci.yml/badge.svg)](https://github.com/GArulDalton/EdgeLight-GAN/actions/workflows/ci.yml)
+[![CI](https://github.com/iitrky/EdgeLight-GAN/actions/workflows/ci.yml/badge.svg)](https://github.com/iitrky/EdgeLight-GAN/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-ee4c2c.svg)](https://pytorch.org/)
@@ -186,7 +186,7 @@ EdgeLight-GAN/
 ## Installation
 
 ```bash
-git clone https://github.com/GArulDalton/EdgeLight-GAN.git
+git clone https://github.com/iitrky/EdgeLight-GAN.git
 cd EdgeLight-GAN
 
 python -m venv .venv
@@ -459,7 +459,7 @@ If you use this code, please cite the paper:
   journal = {Scientific Reports},
   year    = {2026},
   note    = {Manuscript revision R2},
-  url     = {https://github.com/GArulDalton/EdgeLight-GAN},
+  url     = {https://github.com/iitrky/EdgeLight-GAN},
   doi     = {ZENODO_DOI_PLACEHOLDER}
 }
 ```
@@ -471,7 +471,7 @@ The `doi` field above is the Zenodo software DOI. Update `year`, `volume`, and `
 > The source code, model configuration files, dataset-loader configurations,
 > evaluation scripts, reproducibility utilities, and deployment benchmarking
 > scripts for EdgeLight-GAN are publicly available in the project
-> repository **`https://github.com/GArulDalton/EdgeLight-GAN`** and are
+> repository **`https://github.com/iitrky/EdgeLight-GAN`** and are
 > archived on Zenodo at **`https://doi.org/ZENODO_DOI_PLACEHOLDER`**. The
 > repository contains a PyTorch implementation of the method described in the
 > paper, together with instructions for training, evaluation, computational

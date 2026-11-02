@@ -9,7 +9,7 @@ authors:
   - family-names: Kathirvel
     given-names: A.
     affiliation: "Saveetha Engineering College, Chennai, India"
-repository-code: "https://github.com/GArulDalton/EdgeLight-GAN"
+repository-code: "https://github.com/iitrky/EdgeLight-GAN"
 license: MIT
 version: "1.0.0"
 keywords:

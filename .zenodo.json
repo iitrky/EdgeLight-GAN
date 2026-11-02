@@ -10,6 +10,6 @@
   "access_right": "open",
   "keywords": ["low-light image enhancement", "generative adversarial network", "edge computing", "PyTorch"],
   "related_identifiers": [
-    {"relation": "isSupplementTo", "identifier": "https://github.com/GArulDalton/EdgeLight-GAN", "scheme": "url"}
+    {"relation": "isSupplementTo", "identifier": "https://github.com/iitrky/EdgeLight-GAN", "scheme": "url"}
   ]
 }
